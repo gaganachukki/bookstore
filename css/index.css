@@ -88,12 +88,18 @@ ul {
 
 /* ==================== HEADER ==================== */
 .site-header {
-  background-color: #ffffff;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.04);
-  position: sticky;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
   padding: 15px 0;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.site-header.scrolled {
+  background-color: #ffffff;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.04);
 }
 
 .site-header .container {
@@ -138,11 +144,17 @@ ul {
 .main-nav a {
   font-weight: 500;
   font-size: 0.95rem;
-  color: var(--text-dark);
+  color: rgba(255, 255, 255, 0.9);
   position: relative;
+  transition: color 0.3s;
 }
 
-.main-nav a:hover, .main-nav a.active {
+.site-header.scrolled .main-nav a {
+  color: var(--text-dark);
+}
+
+.main-nav a:hover, .main-nav a.active,
+.site-header.scrolled .main-nav a:hover, .site-header.scrolled .main-nav a.active {
   color: var(--primary-color);
 }
 
