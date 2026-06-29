@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - Stackly</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/userdashboard.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="dashboard-section container">
+        <div class="dashboard-grid">
+            
+            <aside class="dashboard-sidebar">
+                <div class="sidebar-user">
+                    <div class="user-avatar">J</div>
+                    <h4>Jane Doe</h4>
+                    <p>jane@example.com</p>
+                </div>
+                <nav class="dashboard-nav">
+                    <ul>
+                        <li>
+                            <a href="#" class="active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                My Orders
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                Wishlist
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                Account Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html" style="color: #d32f2f;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="dashboard-main">
+                <div class="dashboard-header">
+                    <h2>Welcome back, Jane!</h2>
+                    <p style="color: var(--text-light);">Here's an overview of your recent activity.</p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Recent Orders</h3>
+                    <div style="overflow-x: auto;">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#ORD-8921</td>
+                                    <td>Oct 28, 2026</td>
+                                    <td>The Silent Patient</td>
+                                    <td>$14.99</td>
+                                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-8945</td>
+                                    <td>Oct 30, 2026</td>
+                                    <td>Atomic Habits, 1984</td>
+                                    <td>$32.40</td>
+                                    <td><span class="status-badge status-processing">Processing</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

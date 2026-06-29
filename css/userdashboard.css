@@ -1,0 +1,157 @@
+/* Dashboard Shared Styles */
+
+.dashboard-section {
+    padding: 60px 0;
+    min-height: 80vh;
+}
+
+.dashboard-grid {
+    display: flex;
+    gap: 40px;
+}
+
+.dashboard-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    background: white;
+    border-radius: 12px;
+    padding: 25px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    border: 1px solid var(--border-color);
+    align-self: start;
+}
+
+.sidebar-user {
+    text-align: center;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 10px;
+    font-family: var(--font-serif);
+}
+
+.sidebar-user h4 {
+    font-size: 1.1rem;
+}
+
+.sidebar-user p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.dashboard-nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-nav a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 25px;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.dashboard-nav a:hover, .dashboard-nav a.active {
+    background-color: #fcf9f7;
+    color: var(--primary-color);
+    border-right: 3px solid var(--primary-color);
+}
+
+.dashboard-nav a svg {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+}
+
+.dashboard-nav a.active svg {
+    opacity: 1;
+}
+
+.dashboard-main {
+    flex-grow: 1;
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+/* User Dashboard Specific */
+.dashboard-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.dashboard-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Orders Table */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+    font-weight: 600;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-delivered {
+    background: #e6f4ea;
+    color: #137333;
+}
+
+.status-processing {
+    background: #fef7e0;
+    color: #b06000;
+}
+
+@media (max-width: 900px) {
+    .dashboard-grid {
+        flex-direction: column;
+    }
+    .dashboard-sidebar {
+        width: 100%;
+    }
+}

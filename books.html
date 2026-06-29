@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Books - Stackly</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/books.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="page-header" style="background-image: linear-gradient(rgba(28, 21, 17, 0.8), rgba(28, 21, 17, 0.8)), url('assets/hero_2.webp'); background-size: cover; background-position: center;">
+            <div class="container">
+                <h1>Our Collection</h1>
+                <p>Browse through our extensive library of books. From timeless classics to modern bestsellers.</p>
+            </div>
+        </section>
+
+        <section class="container books-container">
+            <aside class="books-sidebar">
+                <div class="filter-group">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><label><input type="checkbox"> Fiction</label></li>
+                        <li><label><input type="checkbox"> Non-Fiction</label></li>
+                        <li><label><input type="checkbox"> Mystery & Thriller</label></li>
+                        <li><label><input type="checkbox"> Science Fiction</label></li>
+                        <li><label><input type="checkbox"> Biography</label></li>
+                        <li><label><input type="checkbox"> Business</label></li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <ul>
+                        <li><label><input type="checkbox"> Under $10</label></li>
+                        <li><label><input type="checkbox"> $10 - $20</label></li>
+                        <li><label><input type="checkbox"> $20 - $30</label></li>
+                        <li><label><input type="checkbox"> Over $30</label></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <div class="books-main">
+                <div class="books-grid">
+                    <!-- Book Item 7 -->
+                    <div class="book-card">
+                        <div class="book-cover" style="padding: 0;">
+                            <img src="assets/h1.webp" alt="Book 7" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-category">Fiction</span>
+                            <h3 class="book-title">The Shadow of the Wind</h3>
+                            <div class="book-author">Carlos Ruiz Zafón</div>
+                            <div class="book-footer">
+                                <span class="book-price">$15.99</span>
+                                <button class="btn-add" title="Add to Cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book Item 8 -->
+                    <div class="book-card">
+                        <div class="book-cover" style="padding: 0;">
+                            <img src="assets/h2.webp" alt="Book 8" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-category">Science Fiction</span>
+                            <h3 class="book-title">Dune</h3>
+                            <div class="book-author">Frank Herbert</div>
+                            <div class="book-footer">
+                                <span class="book-price">$19.50</span>
+                                <button class="btn-add" title="Add to Cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book Item 9 -->
+                    <div class="book-card">
+                        <div class="book-cover" style="padding: 0;">
+                            <img src="assets/h3.webp" alt="Book 9" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-category">Biography</span>
+                            <h3 class="book-title">Steve Jobs</h3>
+                            <div class="book-author">Walter Isaacson</div>
+                            <div class="book-footer">
+                                <span class="book-price">$22.00</span>
+                                <button class="btn-add" title="Add to Cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book Item 10 -->
+                    <div class="book-card">
+                        <div class="book-cover" style="padding: 0;">
+                            <img src="assets/h4.webp" alt="Book 10" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-category">Business</span>
+                            <h3 class="book-title">Good to Great</h3>
+                            <div class="book-author">Jim Collins</div>
+                            <div class="book-footer">
+                                <span class="book-price">$17.20</span>
+                                <button class="btn-add" title="Add to Cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book Item 11 -->
+                    <div class="book-card">
+                        <div class="book-cover" style="padding: 0;">
+                            <img src="assets/h5.webp" alt="Book 11" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-category">Thriller</span>
+                            <h3 class="book-title">Gone Girl</h3>
+                            <div class="book-author">Gillian Flynn</div>
+                            <div class="book-footer">
+                                <span class="book-price">$14.50</span>
+                                <button class="btn-add" title="Add to Cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book Item 12 -->
+                    <div class="book-card">
+                        <div class="book-cover" style="padding: 0;">
+                            <img src="assets/h6.webp" alt="Book 12" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-category">Non-Fiction</span>
+                            <h3 class="book-title">Sapiens</h3>
+                            <div class="book-author">Yuval Noah Harari</div>
+                            <div class="book-footer">
+                                <span class="book-price">$21.00</span>
+                                <button class="btn-add" title="Add to Cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book Item 13 -->
+                    <div class="book-card">
+                        <div class="book-cover" style="padding: 0;">
+                            <img src="assets/h7.webp" alt="Book 13" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-category">Fiction</span>
+                            <h3 class="book-title">1984</h3>
+                            <div class="book-author">George Orwell</div>
+                            <div class="book-footer">
+                                <span class="book-price">$11.99</span>
+                                <button class="btn-add" title="Add to Cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book Item 1 -->
+                    <div class="book-card">
+                        <div class="book-cover" style="padding: 0;">
+                            <img src="assets/product_6.webp" alt="The Silent Patient" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-category">Thriller</span>
+                            <h3 class="book-title">The Silent Patient</h3>
+                            <div class="book-author">Alex Michaelides</div>
+                            <div class="book-footer">
+                                <span class="book-price">$14.99</span>
+                                <button class="btn-add" title="Add to Cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book Item 2 -->
+                    <div class="book-card">
+                        <div class="book-cover" style="padding: 0;">
+                            <img src="assets/product_7.webp" alt="Atomic Habits" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-category">Self-Help</span>
+                            <h3 class="book-title">Atomic Habits</h3>
+                            <div class="book-author">James Clear</div>
+                            <div class="book-footer">
+                                <span class="book-price">$16.50</span>
+                                <button class="btn-add" title="Add to Cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book Item 3 -->
+                    <div class="book-card">
+                        <div class="book-cover" style="padding: 0;">
+                            <img src="assets/product_8.webp" alt="The Midnight Library" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-category">Fiction</span>
+                            <h3 class="book-title">The Midnight Library</h3>
+                            <div class="book-author">Matt Haig</div>
+                            <div class="book-footer">
+                                <span class="book-price">$13.20</span>
+                                <button class="btn-add" title="Add to Cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book Item 4 -->
+                    <div class="book-card">
+                        <div class="book-cover" style="padding: 0;">
+                            <img src="assets/product_9.webp" alt="Where the Crawdads Sing" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-category">Mystery</span>
+                            <h3 class="book-title">Where the Crawdads Sing</h3>
+                            <div class="book-author">Delia Owens</div>
+                            <div class="book-footer">
+                                <span class="book-price">$12.99</span>
+                                <button class="btn-add" title="Add to Cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book Item 5 -->
+                    <div class="book-card">
+                        <div class="book-cover" style="padding: 0;">
+                            <img src="assets/product_10.webp" alt="The Alchemist" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-category">Fiction</span>
+                            <h3 class="book-title">The Alchemist</h3>
+                            <div class="book-author">Paulo Coelho</div>
+                            <div class="book-footer">
+                                <span class="book-price">$10.50</span>
+                                <button class="btn-add" title="Add to Cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book Item 6 -->
+                    <div class="book-card">
+                        <div class="book-cover" style="padding: 0;">
+                            <img src="assets/product_11.webp" alt="Thinking, Fast and Slow" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-category">Psychology</span>
+                            <h3 class="book-title">Thinking, Fast and Slow</h3>
+                            <div class="book-author">Daniel Kahneman</div>
+                            <div class="book-footer">
+                                <span class="book-price">$18.00</span>
+                                <button class="btn-add" title="Add to Cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
