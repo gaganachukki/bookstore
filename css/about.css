@@ -306,19 +306,15 @@
 
 /* ==================== ABOUT: CAREERS ==================== */
 .careers-banner {
-    background: linear-gradient(135deg, var(--dark-bg), #2c251e);
-    background-size: 200% 200%;
-    animation: gradientShift 5s ease infinite;
-    padding: 100px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('../assets/blog_team_reading.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
     text-align: center;
     color: white;
 }
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
 .careers-content h2 {
+    color: white;
     font-size: 3rem;
     margin-bottom: 20px;
 }

@@ -140,28 +140,6 @@
                         </div>
                     </div>
                 </div>
-                        <div class="dash-bar-container">
-                            <div class="dash-bar dash-bar-purple" style="height: 45%;"></div>
-                            <div class="dash-bar-label">Feb</div>
-                        </div>
-                        <div class="dash-bar-container">
-                            <div class="dash-bar dash-bar-purple" style="height: 60%;"></div>
-                            <div class="dash-bar-label">Mar</div>
-                        </div>
-                        <div class="dash-bar-container">
-                            <div class="dash-bar dash-bar-purple" style="height: 40%;"></div>
-                            <div class="dash-bar-label">Apr</div>
-                        </div>
-                        <div class="dash-bar-container">
-                            <div class="dash-bar dash-bar-blue" style="height: 80%;"></div>
-                            <div class="dash-bar-label">May</div>
-                        </div>
-                        <div class="dash-bar-container">
-                            <div class="dash-bar dash-bar-blue" style="height: 95%;"></div>
-                            <div class="dash-bar-label">Jun</div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="dash-panel">
                     <h3>Recent Transactions</h3>
@@ -217,14 +195,14 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><img src="assets/bg.webp" class="table-thumb"></td>
+                                    <td><img src="assets/midnight_library.webp" class="table-thumb" alt="The Midnight Library"></td>
                                     <td><strong>The Midnight Library</strong><br><small>Matt Haig</small></td>
                                     <td>$24.99</td>
                                     <td><span class="badge badge-success">45 in stock</span></td>
                                     <td><a href="#" class="action-link">Edit</a> | <a href="#" class="action-link text-danger">Delete</a></td>
                                 </tr>
                                 <tr>
-                                    <td><img src="assets/bg.webp" class="table-thumb" style="filter: hue-rotate(90deg);"></td>
+                                    <td><img src="assets/atomic_habits.webp" class="table-thumb" alt="Atomic Habits"></td>
                                     <td><strong>Atomic Habits</strong><br><small>James Clear</small></td>
                                     <td>$21.00</td>
                                     <td><span class="badge badge-danger">2 left!</span></td>
@@ -332,19 +310,19 @@
                     <div class="ui-card mt-20">
                         <h3>Monthly Sales</h3>
                         <div class="chart-container">
-                            <div class="bar" style="height: 40%;" title="Jan"></div>
-                            <div class="bar" style="height: 60%;" title="Feb"></div>
-                            <div class="bar" style="height: 50%;" title="Mar"></div>
-                            <div class="bar" style="height: 80%;" title="Apr"></div>
-                            <div class="bar" style="height: 100%;" title="May"></div>
-                            <div class="bar" style="height: 70%;" title="Jun"></div>
+                            <div class="bar" style="height: 40%;" title="Jan"><span>Jan</span></div>
+                            <div class="bar" style="height: 60%;" title="Feb"><span>Feb</span></div>
+                            <div class="bar" style="height: 50%;" title="Mar"><span>Mar</span></div>
+                            <div class="bar" style="height: 80%;" title="Apr"><span>Apr</span></div>
+                            <div class="bar" style="height: 100%;" title="May"><span>May</span></div>
+                            <div class="bar" style="height: 70%;" title="Jun"><span>Jun</span></div>
                         </div>
                     </div>
                 </section>
                 <section id="settings" class="dash-section">
                     <div class="section-header">
                         <h2>Store Configuration</h2>
-                        <button class="btn-action">Save Settings</button>
+                        <button class="btn-action" onclick="document.querySelector('[data-target=\'overview\']').click()">Save Settings</button>
                     </div>
                     <div class="ui-form-layout">
                         <div class="ui-card form-card">

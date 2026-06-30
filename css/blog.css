@@ -1,7 +1,8 @@
 /* Blog specific styles */
 
 .blog-grid {
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: grid;
     
     gap: 50px;
@@ -95,7 +96,7 @@
 
 .blog-main {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 40px;
 }
 
@@ -237,5 +238,17 @@
     }
     .featured-content {
         padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-title {
+        font-size: 1.5rem;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+    .featured-title {
+        font-size: 1.8rem;
+        white-space: normal;
     }
 }

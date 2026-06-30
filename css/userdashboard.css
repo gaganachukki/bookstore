@@ -746,6 +746,13 @@ input:checked + .slider:before {
     background: var(--dash-accent);
     border-radius: 4px 4px 0 0;
     animation: growBar 1s ease-out;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
 }
 
 @keyframes growBar {
@@ -957,6 +964,37 @@ input:checked + .slider:before {
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Global Button Styles */
+.btn-action, .btn-outline {
+    background-color: var(--dash-accent);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--dash-font-sans);
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+.btn-action:hover, .btn-outline:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(223, 122, 62, 0.3);
+}
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--dash-accent);
+    color: var(--dash-accent);
+}
+.btn-outline:hover {
+    background-color: var(--dash-accent);
+    color: white;
+}
+.w-100 {
+    width: 100%;
 }
 .scroll-reveal.revealed {
     opacity: 1;

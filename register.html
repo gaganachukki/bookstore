@@ -101,6 +101,37 @@
             </div>
         </div>
     </div>
+    <script>
+        // 1. Only allow text in Full Name (no numbers or symbols)
+        const nameInput = document.getElementById('name');
+        nameInput.addEventListener('input', function(e) {
+            this.value = this.value.replace(/[^A-Za-z\s]/g, '');
+        });
 
+        // 2 & 3. Password matching and required field popup
+        const passInput = document.getElementById('password');
+        const confirmPassInput = document.getElementById('confirm-password');
+
+        function validatePassword() {
+            if (passInput.value !== confirmPassInput.value) {
+                confirmPassInput.setCustomValidity("Passwords do not match. Please try again.");
+            } else {
+                confirmPassInput.setCustomValidity('');
+            }
+        }
+        passInput.addEventListener('change', validatePassword);
+        confirmPassInput.addEventListener('keyup', validatePassword);
+
+        // 4. Redirect to login page on successful submission
+        const form = document.getElementById('auth-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+            if(form.checkValidity()) {
+                window.location.href = 'login.html';
+            } else {
+                form.reportValidity();
+            }
+        });
+    </script>
 </body>
 </html>
