@@ -30,8 +30,31 @@ document.addEventListener('DOMContentLoaded', () => {
                     Login
                 </a>
             </div>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-menu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+
+    <!-- Full Screen Mobile Overlay -->
+    <div class="mobile-sidebar-overlay">
+        <button class="mobile-sidebar-close" aria-label="Close menu">&times;</button>
+        <div class="mobile-sidebar-content">
+            <nav class="mobile-nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="books.html">Books</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="login.html" class="btn btn-primary" style="margin-top: 30px; text-align: center;">Login / Register</a>
+        </div>
+    </div>
     `;
 
     // --- Shared Footer ---
@@ -60,9 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h4>Support</h4>
                     <ul>
                         <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="#">Returns</a></li>
+                        <li><a href="404.html">FAQ</a></li>
+                        <li><a href="404.html">Shipping Policy</a></li>
+                        <li><a href="404.html">Returns</a></li>
                     </ul>
                 </div>
 
@@ -126,4 +149,122 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+});
+
+// --- Dashboard User Name from Email ---
+document.addEventListener('DOMContentLoaded', () => {
+    const isDashboard = window.location.pathname.includes('dashboard');
+    if (isDashboard) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const email = urlParams.get('email');
+        let username = null;
+        
+        if (email) {
+            const namePart = email.split('@')[0];
+            username = namePart.split(/[._-]/).map(part => part.charAt(0).toUpperCase() + part.slice(1)).join(' ');
+            localStorage.setItem('dashboard_username', username);
+        } else {
+            username = localStorage.getItem('dashboard_username');
+        }
+        
+        if (username) {
+            const firstLetter = username.charAt(0).toUpperCase();
+            document.querySelectorAll('.dash-avatar').forEach(el => el.textContent = firstLetter);
+            document.querySelectorAll('.dash-username').forEach(el => el.textContent = username);
+            
+            const userWelcome = document.querySelector('.dash-welcome h1');
+            if (userWelcome && !window.location.pathname.includes('admin')) {
+                userWelcome.textContent = `Reader Dashboard - Welcome, ${username}!`;
+            }
+
+            const adminWelcome = document.querySelector('.dash-welcome h1');
+            if (adminWelcome && window.location.pathname.includes('admin')) {
+                adminWelcome.textContent = `Welcome back, ${username}! Here's what's happening today.`;
+            }
+        }
+    }
+});
+
+// --- Dashboard Navigation Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.dash-section');
+    
+    if (navLinks.length > 0) {
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                navLinks.forEach(l => l.classList.remove('active'));
+                
+                // Add active class to clicked link
+                link.classList.add('active');
+                
+                // Hide all sections
+                sections.forEach(s => s.classList.remove('active'));
+                
+                // Show targeted section
+                const targetId = link.getAttribute('data-target');
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+        });
+    }
+});
+
+// --- Mobile Sidebar Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const closeBtn = document.querySelector('.mobile-close-btn');
+    const sidebar = document.querySelector('.dash-sidebar');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    if (menuBtn && sidebar) {
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.add('mobile-active');
+        });
+    }
+    
+    if (closeBtn && sidebar) {
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('mobile-active');
+        });
+    }
+    
+    if (sidebar) {
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    sidebar.classList.remove('mobile-active');
+                }
+            });
+        });
+    }
+});
+
+// --- Main Site Mobile Navigation Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Wait slightly to ensure header is injected
+    setTimeout(() => {
+        const hamburgerBtn = document.querySelector('.hamburger-menu');
+        const overlay = document.querySelector('.mobile-sidebar-overlay');
+        const closeBtn = document.querySelector('.mobile-sidebar-close');
+        
+        if (hamburgerBtn && overlay) {
+            hamburgerBtn.addEventListener('click', () => {
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+        }
+        
+        if (closeBtn && overlay) {
+            closeBtn.addEventListener('click', () => {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+    }, 100);
 });

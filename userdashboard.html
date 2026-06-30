@@ -3,67 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Dashboard - Stackly</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>My Dashboard | Stackly</title>
+    <!-- Use only the dashboard specific css for layout -->
     <link rel="stylesheet" href="css/userdashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
-    <main class="dashboard-section container">
-        <div class="dashboard-grid">
+    <div class="dash-layout">
+        <aside class="dash-sidebar">
+            <button class="mobile-close-btn">&times;</button>
+            <div class="dash-logo">
+                <img src="assets/logo.webp" alt="Stackly Logo" style="height: 42px; width: auto;">
+            </div>
+            <div class="dash-menu-title">USER PORTAL</div>
+            <nav class="dash-nav">
+                <ul>
+                    <li>
+                        <a href="#" class="nav-link active" data-target="overview">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                            Overview
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-target="reading">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                            Reading Progress
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-target="myorders">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            My Orders
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-target="wishlist">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            Wishlist
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-target="settings">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="dash-logout">
+                <a href="login.html">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    Logout
+                </a>
+            </div>
+        </aside>
+        
+        <main class="dash-main">
+            <header class="dash-header">
+                <button class="mobile-menu-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+                <div class="dash-title"><span class="desktop-title">My Dashboard</span><img src="assets/logo.webp" alt="Stackly" class="mobile-logo"></div>
+                <div class="dash-user">
+                    <div class="dash-notif">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        <div class="badge">2</div>
+                    </div>
+                    <div class="dash-avatar-wrapper">
+                        <div class="dash-avatar">S</div>
+                        <span class="dash-username">Sarah Jenkins</span>
+                    </div>
+                </div>
+            </header>
             
-            <aside class="dashboard-sidebar">
-                <div class="sidebar-user">
-                    <div class="user-avatar">J</div>
-                    <h4>Jane Doe</h4>
-                    <p>jane@example.com</p>
-                </div>
-                <nav class="dashboard-nav">
-                    <ul>
-                        <li>
-                            <a href="#" class="active">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                My Orders
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                                Wishlist
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                Account Settings
-                            </a>
-                        </li>
-                        <li>
-                            <a href="login.html" style="color: #d32f2f;">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-                                Logout
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
-
-            <div class="dashboard-main">
-                <div class="dashboard-header">
-                    <h2>Welcome back, Jane!</h2>
-                    <p style="color: var(--text-light);">Here's an overview of your recent activity.</p>
+            <div class="dash-content">
+                <section id="overview" class="dash-section active">
+                <div class="dash-welcome">
+                    <h1>Reader Dashboard - Welcome, Sarah!</h1>
+                    <p>Your pre-ordered book "The Midnight Library" is arriving tomorrow. Review your reading stats and latest picks below.</p>
+                    <button class="btn-action">View Order Status</button>
                 </div>
 
-                <div class="dashboard-card">
+                <div class="dash-stats-grid">
+                    <div class="dash-stat-card">
+                        <div class="dash-stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+                        </div>
+                        <div class="dash-stat-info">
+                            <h5>Books Read This Year</h5>
+                            <h3>24</h3>
+                        </div>
+                    </div>
+                    <div class="dash-stat-card">
+                        <div class="dash-stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </div>
+                        <div class="dash-stat-info">
+                            <h5>Books in Wishlist</h5>
+                            <h3>15</h3>
+                        </div>
+                    </div>
+                    <div class="dash-stat-card">
+                        <div class="dash-stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                        </div>
+                        <div class="dash-stat-info">
+                            <h5>Active Orders</h5>
+                            <h3>2</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-charts-grid">
+                    <div class="dash-panel">
+                        <h3>Reading Goals Progress</h3>
+                        <div style="position: relative; height: 300px; width: 100%;">
+                            <canvas id="userBarChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="dash-panel">
+                        <h3>Favorite Genres</h3>
+                        <div style="position: relative; height: 300px; width: 100%; display: flex; justify-content: center;">
+                            <canvas id="userPieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                        <div class="dash-bar-container">
+                            <div class="dash-bar dash-bar-purple" style="height: 60%;"></div>
+                            <div class="dash-bar-label">Feb</div>
+                        </div>
+                        <div class="dash-bar-container">
+                            <div class="dash-bar dash-bar-green" style="height: 35%;"></div>
+                            <div class="dash-bar-label">Mar</div>
+                        </div>
+                        <div class="dash-bar-container">
+                            <div class="dash-bar dash-bar-orange" style="height: 80%;"></div>
+                            <div class="dash-bar-label">Apr</div>
+                        </div>
+                        <div class="dash-bar-container">
+                            <div class="dash-bar dash-bar-blue" style="height: 55%;"></div>
+                            <div class="dash-bar-label">May</div>
+                        </div>
+                        <div class="dash-bar-container">
+                            <div class="dash-bar dash-bar-purple" style="height: 90%;"></div>
+                            <div class="dash-bar-label">Jun</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-panel">
                     <h3>Recent Orders</h3>
-                    <div style="overflow-x: auto;">
-                        <table class="data-table">
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Date</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ORD-8921</td>
+                                <td>Jun 28, 2026</td>
+                                <td>The Midnight Library</td>
+                                <td>$24.99</td>
+                                <td><span class="status-badge status-processing">Processing</span></td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-8854</td>
+                                <td>Jun 15, 2026</td>
+                                <td>Atomic Habits, 1984</td>
+                                <td>$32.40</td>
+                                <td><span class="status-badge status-delivered">Delivered</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            
+                </section>
+                <section id="reading" class="dash-section">
+                    <div class="section-header">
+                        <h2>Reading Progress</h2>
+                        <button class="btn-action">Log Reading</button>
+                    </div>
+                    <div class="ui-grid">
+                        <div class="ui-card progress-card">
+                            <img src="assets/bg.webp" alt="Book" class="cover-thumb">
+                            <div class="card-details">
+                                <h4>The Midnight Library</h4>
+                                <p>Chapter 14 of 42</p>
+                                <div class="progress-track"><div class="progress-fill" style="width: 33%"></div></div>
+                                <span>33% Completed</span>
+                            </div>
+                        </div>
+                        <div class="ui-card progress-card">
+                            <img src="assets/bg.webp" alt="Book" class="cover-thumb" style="filter: hue-rotate(90deg);">
+                            <div class="card-details">
+                                <h4>Atomic Habits</h4>
+                                <p>Chapter 2 of 20</p>
+                                <div class="progress-track"><div class="progress-fill" style="width: 10%"></div></div>
+                                <span>10% Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="myorders" class="dash-section">
+                    <div class="section-header">
+                        <h2>Order History</h2>
+                    </div>
+                    <div class="table-container">
+                        <table class="ui-table">
                             <thead>
                                 <tr>
                                     <th>Order ID</th>
@@ -71,32 +221,101 @@
                                     <th>Items</th>
                                     <th>Total</th>
                                     <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>#ORD-8921</td>
-                                    <td>Oct 28, 2026</td>
-                                    <td>The Silent Patient</td>
-                                    <td>$14.99</td>
-                                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                                    <td>#ORD-9012</td>
+                                    <td>Jun 28, 2026</td>
+                                    <td>The Midnight Library</td>
+                                    <td>$24.99</td>
+                                    <td><span class="badge badge-warning">Shipped</span></td>
+                                    <td><button class="btn-outline">Track</button></td>
                                 </tr>
                                 <tr>
-                                    <td>#ORD-8945</td>
-                                    <td>Oct 30, 2026</td>
+                                    <td>#ORD-8854</td>
+                                    <td>Jun 15, 2026</td>
                                     <td>Atomic Habits, 1984</td>
                                     <td>$32.40</td>
-                                    <td><span class="status-badge status-processing">Processing</span></td>
+                                    <td><span class="badge badge-success">Delivered</span></td>
+                                    <td><button class="btn-outline">Invoice</button></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                </div>
-            </div>
-            
-        </div>
-    </main>
+                </section>
+                <section id="wishlist" class="dash-section">
+                    <div class="section-header">
+                        <h2>My Wishlist</h2>
+                    </div>
+                    <div class="ui-grid">
+                        <div class="ui-card product-card">
+                            <img src="assets/bg.webp" alt="Book" class="product-image" style="filter: hue-rotate(45deg);">
+                            <div class="product-info">
+                                <h4>Dune</h4>
+                                <p>Frank Herbert</p>
+                                <h3 class="price">$19.99</h3>
+                                <button class="btn-action w-100">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="ui-card product-card">
+                            <img src="assets/bg.webp" alt="Book" class="product-image" style="filter: hue-rotate(180deg);">
+                            <div class="product-info">
+                                <h4>Project Hail Mary</h4>
+                                <p>Andy Weir</p>
+                                <h3 class="price">$22.50</h3>
+                                <button class="btn-action w-100">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="settings" class="dash-section">
+                    <div class="section-header">
+                        <h2>Account Settings</h2>
+                        <button class="btn-action">Save Changes</button>
+                    </div>
+                    <div class="ui-form-layout">
+                        <div class="ui-card form-card">
+                            <h3>Personal Information</h3>
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" value="Sarah Jenkins">
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" value="sarah@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>New Password</label>
+                                <input type="password" placeholder="Leave blank to keep current">
+                            </div>
+                        </div>
+                        <div class="ui-card form-card">
+                            <h3>Notifications</h3>
+                            <div class="toggle-group">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                                <span>Order Updates via Email</span>
+                            </div>
+                            <div class="toggle-group">
+                                <label class="toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                                <span>Weekly Newsletter</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
+            </div>
+        </main>
+    </div>
     <script src="js/script.js"></script>
+    <script src="js/scroll_animations.js"></script>
+    <script src="js/charts.js"></script>
 </body>
 </html>

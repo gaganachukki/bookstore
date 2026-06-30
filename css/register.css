@@ -33,7 +33,7 @@ body { margin: 0; padding: 0; font-family: var(--font-sans); height: 100vh; over
 /* Right Panel */
 .login-right {
     flex: 1; background-color: #120e0c; color: white;
-    padding: 30px 50px; position: relative; display: flex; flex-direction: column;
+    padding: 30px 50px; position: relative; display: flex; flex-direction: column; overflow-y: auto;
 }
 .back-link {
     align-self: flex-end; color: #8c857f; text-decoration: none; font-size: 0.85rem;
