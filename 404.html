@@ -14,9 +14,14 @@
         <div class="error-content">
             <h2>Oops! Page Not Found</h2>
             <p>We're sorry, but the page you are looking for doesn't exist, has been removed, or is temporarily unavailable.</p>
-            <a href="index.html" class="btn btn-primary" style="padding: 12px 30px; border-radius: 30px;">
-                Back to Home
-            </a>
+            <div class="error-actions" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="javascript:history.back()" class="btn btn-outline-dark" style="padding: 12px 30px; border-radius: 30px;">
+                    Go Back
+                </a>
+                <a href="index.html" class="btn btn-primary" style="padding: 12px 30px; border-radius: 30px;">
+                    Back to Home
+                </a>
+            </div>
         </div>
     </main>
 

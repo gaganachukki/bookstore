@@ -148,8 +148,8 @@
 }
 .featured-split {
     display: flex;
-    gap: 50px;
-    align-items: center;
+    gap: 40px;
+    align-items: stretch;
     background-color: white;
     border: 1px solid var(--border-color);
     border-radius: 12px;
@@ -157,7 +157,8 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 .featured-image {
-    flex: 1.2;
+    flex: 1;
+    display: flex;
 }
 .featured-image img {
     width: 100%;
@@ -167,7 +168,10 @@
 }
 .featured-content {
     flex: 1;
-    padding: 40px 50px 40px 0;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .featured-badge {
     display: inline-block;
@@ -250,5 +254,22 @@
     .featured-title {
         font-size: 1.8rem;
         white-space: normal;
+    }
+}
+
+/* Fix for hover gradient border merging with content */
+.blog-post::after {
+    inset: -20px -20px 30px -20px !important;
+    border-radius: 16px !important;
+}
+
+/* TABLET SPECIFIC RESPONSIVE DESIGN */
+@media (min-width: 769px) and (max-width: 992px) {
+    .featured-image img {
+        max-width: 500px;
+        margin: 0 auto;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 4 / 3;
     }
 }

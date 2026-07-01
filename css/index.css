@@ -86,6 +86,19 @@ ul {
   border-color: white;
 }
 
+.btn-outline-dark {
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--dark-bg);
+  color: white;
+  border-color: var(--dark-bg);
+  transform: translateY(-2px);
+}
+
 /* ==================== HEADER ==================== */
 .site-header {
   background-color: transparent;
@@ -640,14 +653,36 @@ ul {
         display: flex;
         flex-direction: column-reverse;
     }
+    .author-layout {
+        gap: 30px;
+    }
+    .author-image-wrapper {
+        max-width: 450px;
+        margin: 0 auto;
+    }
     .author-image {
-        height: 350px;
+        height: 450px; /* Use a fixed height or aspect-ratio */
+        max-height: 80vw; /* Keep it responsive on smaller screens */
     }
     .club-content {
         padding: 40px 30px;
     }
     .newsletter-form {
         flex-direction: column;
+    }
+}
+
+/* TABLET SPECIFIC RESPONSIVE DESIGN (Preserving mobile <768px and desktop >900px) */
+@media (min-width: 769px) and (max-width: 900px) {
+    .features-grid, .category-grid, .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .club-image {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    .club-image img {
+        aspect-ratio: 1 / 1;
     }
 }
 
