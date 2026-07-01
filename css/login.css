@@ -19,7 +19,7 @@ body { margin: 0; padding: 0; font-family: var(--font-sans); height: 100vh; over
     font-family: var(--font-serif); font-weight: 700; margin-bottom: 40px; text-decoration: none; color: white;
 }
 .brand-logo svg { color: var(--primary-color); }
-.welcome-text h1 { color: white; font-size: 3rem; line-height: 1.1; margin-bottom: 15px; font-family: var(--font-serif); }
+.welcome-text h1 { color: white; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin-bottom: 15px; font-family: var(--font-serif); }
 .welcome-text p { color: white; font-size: 1.05rem; line-height: 1.5; max-width: 450px; opacity: 0.9; margin: 0; }
 .testimonial-card {
     position: relative; z-index: 2;
@@ -45,7 +45,7 @@ body { margin: 0; padding: 0; font-family: var(--font-sans); height: 100vh; over
     max-width: 400px; margin: 0 auto; width: 100%;
 }
 .form-header { text-align: center; margin-bottom: 25px; }
-.form-header h2 { font-size: 1.8rem; margin-bottom: 8px; }
+.form-header h2 { font-size: 1.8rem; margin-bottom: 8px; color: white; }
 .form-header p { color: #8c857f; font-size: 0.9rem; margin: 0; }
 
 .role-selector { display: flex; gap: 15px; margin-bottom: 20px; }

@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             <div class="footer-bottom-new">
                 <div class="copy-text">&copy; 2026 Stackly. All rights reserved.</div>
-                <div class="footer-links-bottom">
+                <div class="legal-links">
                     <a href="404.html">Privacy Policy</a>
                     <a href="404.html">Terms of Service</a>
                 </div>
