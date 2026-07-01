@@ -44,8 +44,8 @@
 
 .blog-excerpt {
     color: var(--text-light);
-    font-size: 1.1rem;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
 .read-more {
@@ -71,7 +71,7 @@
 
 .sidebar-widget h4 {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding-bottom: 10px;
     border-bottom: 1px solid var(--border-color);
 }
@@ -193,10 +193,10 @@
     color: var(--text-dark);
 }
 .featured-excerpt {
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: var(--text-light);
-    line-height: 1.7;
-    margin-bottom: 30px;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 .featured-meta {
     display: flex;
